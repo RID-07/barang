@@ -1,0 +1,20 @@
+CREATE TABLE toko.barang (
+	id_barang bigserial NOT NULL,
+	nama_barang varchar(100) NULL,
+	unit_barang varchar(150) NULL,
+	stok_barang int8 null,
+	CONSTRAINT id_barang_pkey PRIMARY key (id_barang)
+);
+
+CREATE TABLE toko.customer (
+	id_pemesan bigserial NOT NULL,
+	no_register varchar(50) NULL,
+	nama_barang varchar(100) NULL,
+	ket_pemesan varchar(100) NULL,
+	jumlah_barang int8 NULL,
+	unit_barang varchar(100) NULL,
+	alamat_pemesan varchar(100) null,
+	nama_pemesan varchar(50) null,
+	tanggal_pemesanan timestamp null,
+	CONSTRAINT id_pemesan_pkey PRIMARY key (id_pemesan)
+);
